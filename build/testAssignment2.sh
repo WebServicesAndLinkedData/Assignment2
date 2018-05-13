@@ -16,7 +16,7 @@ username=$(curl -s -H "Authorization: token $TOKEN" -X GET "https://api.github.c
 #	{username}.rdf
 if [ ! -f "$username.rdf" ]
 then
-    echo "RDF file missing. Make sure it has the correct format" $username.rdf
+    echo "RDF file missing. Make sure it has the correct format" $username.rdf >&2
 	missingrdf=true
 	errors=$((errors+1))
 fi
@@ -24,21 +24,21 @@ fi
 #	{username}.ttl
 if [ ! -f "$username.ttl" ]
 then
-    echo "TTL file missing. Make sure it has the correct format" $username.ttl
+    echo "TTL file missing. Make sure it has the correct format" $username.ttl >&2
 	missingttl=true
 	errors=$((errors+1))
 fi
 #	{username}.png
 if [ ! -f "$username.png" ]
 then
-    echo "PNG file missing. Make sure it has the correct format" $username.png
+    echo "PNG file missing. Make sure it has the correct format" $username.png >&2
 	errors=$((errors+1))
 fi
 
 #Validate rdf and ttl
 if [ "$missingrdf" != true ] && [ "$missingttl" != true ]
 then
-	java -cp ./test/jena-1.jar Test $username
+	java -cp ./test/jena-1.jar Test $username >&2
 	if [[ $? -ne 0 ]]
 	then
 		errors=$((errors+1))
