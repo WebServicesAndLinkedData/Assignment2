@@ -7,7 +7,7 @@
 #Exit Value: Number of errors found, 0 if the files were correct
 
 #Check username of pull-request
-errors=0
+errors=1
 missingrdf=false
 missingttl=false
 sleep 2
