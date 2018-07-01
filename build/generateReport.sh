@@ -11,11 +11,11 @@ DATE=`date +%Y-%m-%d`
 sed -i '/Assignment 2,*/d' $username.csv
 
 if [ -s "err" ]; then
-   echo "[CI SKIP] Assignment 2, Submitted with errors, " $DATE >> $username.csv
+   echo "Assignment 2, Submitted with errors, " $DATE >> $username.csv
 else
-   echo "[CI SKIP] Assignment 2, Submitted succesfully, " $DATE >> $username.csv
+   echo "Assignment 2, Submitted succesfully, " $DATE >> $username.csv
 fi
 
 git add $username.csv
-git commit -m "$username report updated"
+git commit -m "$username report updated [ci skip]"
 git push https://LinkedDataCommenter:$TOKEN@github.com/WebServicesAndLinkedData/Assignment1.git &> /dev/null
