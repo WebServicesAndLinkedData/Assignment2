@@ -9,7 +9,7 @@ git clone https://github.com/WebServicesAndLinkedData/Assignment1.git
 cd Assignment1
 
 if [ ! -f $username.csv ]; then
-   echo "CSV file not found to write the report. Aborting."
+   echo "CSV file $username.csv not found to write the report. Aborting."
    exit 1
 fi
 
