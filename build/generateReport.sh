@@ -11,9 +11,9 @@ DATE=`date +%Y-%m-%d`
 sed -i '/Assignment 2,*/d' $username.csv
 
 if [ -s "err" ]; then
-   echo "Assignment 2, Submitted with errors, " $DATE >> $username.csv
+   echo "[CI SKIP] Assignment 2, Submitted with errors, " $DATE >> $username.csv
 else
-   echo "Assignment 2, Submitted succesfully, " $DATE >> $username.csv
+   echo "[CI SKIP] Assignment 2, Submitted succesfully, " $DATE >> $username.csv
 fi
 
 git add $username.csv
