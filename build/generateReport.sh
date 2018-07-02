@@ -16,7 +16,7 @@ fi
 DATE=`date +%Y-%m-%d`
 sed -i '/Assignment 2,*/d' $username.csv
 
-if [ -s "err" ]; then
+if [ -s ../err ]; then
    echo "Err file is not empty"
    echo "Assignment 2, Submitted with errors, " $DATE >> $username.csv
 else
