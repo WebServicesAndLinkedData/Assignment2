@@ -2,7 +2,6 @@
 
 #Name: testAssignment2.sh
 #Description: Validates that the assignment files exist and are correct
-#Parameters: None
 #Output: Descriptions of errors found
 #Exit Value: Number of errors found, 0 if the files were correct
 
