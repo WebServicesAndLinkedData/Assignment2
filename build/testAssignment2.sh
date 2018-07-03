@@ -44,6 +44,7 @@ then
 		errors=$((errors+1))
 	fi
 	sed -i -e 1,3d err
+	head -1 err > err
 fi
 
 #Add name to report file if it doesnt exist with field of correct or incorrect build
