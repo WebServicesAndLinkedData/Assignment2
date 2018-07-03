@@ -1,6 +1,6 @@
 if [ -s "err" ]
 then
-  msg=$(head -1 err | sed 's/\"/\\\"/g' )
+  msg=$(sed ':a;N;$!ba;s/\n/<br\/>/g' err)
 else
   msg="Build Succesful"
 fi
