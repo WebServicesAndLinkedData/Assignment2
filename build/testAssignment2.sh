@@ -46,7 +46,4 @@ then
 	head -1 err > err
 fi
 
-#Add name to report file if it doesnt exist with field of correct or incorrect build
-
-
 exit $errors
