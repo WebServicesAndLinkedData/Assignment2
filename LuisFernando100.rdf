@@ -4,7 +4,7 @@
   xml:base="http://upm.fi/wsld/ass2.rdf"
 >
 
-<rdf:Description rdf:about="ass2.rdf#Class01">
+<rdf:Description rdf:aboutass2.rdf#Class01">
 	<rdf:includes rdf:resource="ass2.rdf#Sensor029"/>
 	<rdf:includes rdf:resource="ass2.rdf#Computer101"/>
 </rdf:Description>
