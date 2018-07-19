@@ -10,7 +10,7 @@ errors=0
 missingrdf=false
 missingttl=false
 sleep 2
-username=$(curl -H "Authorization: token $TOKEN" -X GET "https://api.github.com/repos/${SEMAPHORE_REPO_SLUG}/pulls/${PULL_REQUEST_NUMBER}" | jq -r '.user.login')
+username=$(curl -s -H "Authorization: token $TOKEN" -X GET "https://api.github.com/repos/${SEMAPHORE_REPO_SLUG}/pulls/${PULL_REQUEST_NUMBER}" | jq -r '.user.login')
 #Check files exist
 #	{username}.rdf
 if [ ! -f "$username.rdf" ]
